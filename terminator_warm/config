@@ -4,7 +4,7 @@
   tab_position = hidden
   title_inactive_fg_color = "#e5c200"
   title_transmit_bg_color = "#ff4f51"
-  window_state = hidden
+
 [keybindings]
 [layouts]
   [[default]]
