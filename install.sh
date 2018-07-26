@@ -11,10 +11,10 @@ fi
 if [ "$1" = "--cli_only" ]; then
 	echo "installing comman line only"
 	sudo apt-get update 
-	sudo apt-get install -y git-core zsh mc vim screen terminator htop openssh-server
+	sudo apt-get install -y git-core zsh mc vim screen htop openssh-server power
 else
 	sudo apt-get update 
-	sudo apt-get install -y git-core zsh mc vim screen htop openssh-server	
+	sudo apt-get install -y git-core zsh mc vim screen terminator htop openssh-server fonts-powerline	
 fi
 
 #let's set the terminator config
@@ -34,11 +34,6 @@ esac
 #let's install zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 chsh -s $(which zsh)
-#and now the fancy custom fonts
-git clone https://github.com/powerline/fonts.git --depth=1
-sh fonts/install.sh
-rm -rf fonts
-cp zshrc ~/.zshrc
 #install plugins
 cd ~/.oh-my-zsh/custom/plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting
