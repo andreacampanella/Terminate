@@ -4,14 +4,14 @@
 if [ -z "$*" ]; then 
     echo 'install.sh -w or --warm to install terminator with warm colour palette'
     echo 'install.sh -c or --cold to install terminator with cold colour palette'
-    echo 'install.sh ---cli_only to install in a commandline only env'
+    echo 'install.sh --cli_only to install in a commandline only env'
     exit 0
 fi 
 
 if [ "$1" = "--cli_only" ]; then
 	echo "installing comman line only"
 	sudo apt-get update 
-	sudo apt-get install -y git-core zsh mc vim screen htop openssh-server power
+	sudo apt-get install -y git-core zsh mc vim screen htop openssh-server
 else
 	sudo apt-get update 
 	sudo apt-get install -y git-core zsh mc vim screen terminator htop openssh-server fonts-powerline	
